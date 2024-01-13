@@ -5,16 +5,16 @@ permutacja(Lista, [Element|Permutacja]) :-
     permutacja(Reszta, Permutacja).
 
 % Predykat do sprawdzania, czy lista jest posortowana nie rosnąco
-posortowana_nierosnaco([]).
-posortowana_nierosnaco([_]).
-posortowana_nierosnaco([X, Y|Reszta]) :-
+posortowana_malejaco([]).
+posortowana_malejaco([_]).
+posortowana_malejaco([X, Y|Reszta]) :-
     X >= Y,
-    posortowana_nierosnaco([Y|Reszta]).
+    posortowana_malejaco([Y|Reszta]).
 
 % Predykat sortujący przez generowanie permutacji
 sortuj(Lista, Posortowana) :-
     permutacja(Lista, Posortowana),
-    posortowana_nierosnaco(Posortowana).
+    posortowana_malejaco(Posortowana).
 
 :- initialization(main).
 main :-
