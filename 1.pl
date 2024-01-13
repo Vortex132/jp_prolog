@@ -20,8 +20,7 @@ sortuj(Lista, Posortowana) :-
 main :-
     Lista = [5, 1, 3, 4, 9, 2, 6],
     write(Lista), nl,
-    
-    % Wywołanie predykatu sortującego
+
     sortuj(Lista, Posortowana),
     
     write(Posortowana), nl.
