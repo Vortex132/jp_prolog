@@ -4,7 +4,7 @@ permutacja(Lista, [Element|Permutacja]) :-
     select(Element, Lista, Reszta),
     permutacja(Reszta, Permutacja).
 
-% Predykat do sprawdzania, czy lista jest posortowana nie rosnąco
+% Predykat do sprawdzania, czy lista jest posortowana malejąco
 posortowana_malejaco([]).
 posortowana_malejaco([_]).
 posortowana_malejaco([X, Y|Reszta]) :-
