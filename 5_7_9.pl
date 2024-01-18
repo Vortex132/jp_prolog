@@ -1,0 +1,2 @@
+czy_wygrywa(Plansza, ) :-
+    
